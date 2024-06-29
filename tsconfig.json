@@ -20,7 +20,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "paths": {}
+    "paths": {
+      "@components": ["./libs/components/index.ts"],
+      "@assets/*": ["./libs/assets/*"],
+      "@libs/types": ["./libs/types/index.ts"]
+    }
   },
   "include": ["app", "libs"],
   "references": [{ "path": "./tsconfig.vite.json" }]
