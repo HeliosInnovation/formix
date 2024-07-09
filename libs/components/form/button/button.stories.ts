@@ -12,6 +12,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     children: { control: 'text' },
     color: { control: 'select' },
+    size: { control: 'select' },
   },
   args: { onClick: fn() },
 };
@@ -23,5 +24,6 @@ export const Default: Story = {
   args: {
     children: 'button',
     color: 'default',
+    size: 'medium',
   },
 };

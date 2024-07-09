@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { buttonClassName } from './class-names';
-import type { ButtonColor } from './types';
+import type { ButtonColor, ButtonSize } from './types';
 
 interface ButtonProps
   extends DetailedHTMLProps<
@@ -11,14 +11,15 @@ interface ButtonProps
   > {
   children: ReactNode;
   color?: ButtonColor;
+  size?: ButtonSize;
 }
 
-export const Button = ({ children, className, color }: ButtonProps) => {
+export const Button = ({ children, className, color, size }: ButtonProps) => {
   return (
     <button
       className={twMerge(
         'inline-block rounded border px-12 py-3 text-sm font-medium  hover:bg-transparent focus:outline-none focus:ring',
-        buttonClassName({ color }),
+        buttonClassName({ color, size }),
         className,
       )}
     >
