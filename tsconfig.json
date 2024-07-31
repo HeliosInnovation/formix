@@ -24,6 +24,8 @@
       "@components": ["./libs/components/index.ts"],
       "@assets/*": ["./libs/assets/*"],
       "@libs/types": ["./libs/types/index.ts"],
+      "@auth": ["./modules/auth/index.ts"],
+      "@auth/*": ["./modules/auth/*"],
       "@core": ["./modules/core/index.ts"],
       "@core/*": ["./modules/core/*"]
     }
